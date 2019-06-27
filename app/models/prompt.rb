@@ -1,5 +1,6 @@
 class Prompt < ApplicationRecord
-  belongs_to :word1
-  belongs_to :word2
+  belongs_to :beginning
+  belongs_to :ending
+  has_many :stories
 
 end
