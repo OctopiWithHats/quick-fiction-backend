@@ -15,6 +15,24 @@ ActiveRecord::Schema.define(version: 2019_06_26_144955) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "beginnings", force: :cascade do |t|
+    t.string "word"
+  end
+
+  create_table "endings", force: :cascade do |t|
+    t.string "word"
+  end
+
+  create_table "prompts", force: :cascade do |t|
+    t.integer "beginning_id"
+    t.integer "ending_id"
+  end
+
+  create_table "stories", force: :cascade do |t|
+    t.integer "prompt_id"
+    t.string "text"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
