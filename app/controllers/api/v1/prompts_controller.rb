@@ -1,9 +1,13 @@
-class PromptsController < ApplicationController
+class Api::V1::PromptsController < ApplicationController
 
   def index
     @prompts = Prompt.all
 
     render json: @prompts
+  end
+
+  def show
+    @prompts
   end
   #new prompt
   def new
