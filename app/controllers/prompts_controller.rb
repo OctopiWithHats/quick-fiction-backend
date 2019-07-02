@@ -1,4 +1,4 @@
-class Api::V1::PromptsController < ApplicationController
+class PromptsController < ApplicationController
 
   def index
     @prompts = Prompt.all
