@@ -1,5 +1,4 @@
-class Api::V1::StoriesController < ApplicationController
-  skip_before_action :authorized, only: [:create]
+class StoriesController < ApplicationController
 
   def index
     @stories = Story.all
