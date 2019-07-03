@@ -16,12 +16,13 @@ class StoriesController < ApplicationController
 
   #create story
   def create
-    @story = Story.new(secure_params)
+    @story = Story.create(secure_params)
+    render json:@story
   end
 
   private
   def secure_params
-    params.require(:story).permit(:prompt_id, :user_id)
+    params.require(:story).permit(:prompt_id, :text)
   end
 
 end

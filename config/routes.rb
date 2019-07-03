@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   #   end
   # end
   get '/stories', to: 'stories#index'
+  post '/stories', to: 'stories#create'
   get '/prompts', to: 'prompts#index'
   get '/beginnings', to: 'beginnings#index'
   get '/endings', to: 'endings#index'
