@@ -29,8 +29,10 @@ ActiveRecord::Schema.define(version: 2019_06_26_144955) do
   end
 
   create_table "stories", force: :cascade do |t|
-    t.integer "prompt_id"
+    t.integer "beginning_id"
+    t.integer "ending_id"
     t.string "text"
+    t.integer "likes"
   end
 
   create_table "users", force: :cascade do |t|
