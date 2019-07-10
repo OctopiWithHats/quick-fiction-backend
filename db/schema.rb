@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2019_06_26_144955) do
   create_table "stories", force: :cascade do |t|
     t.integer "beginning_id"
     t.integer "ending_id"
+    t.string "author"
     t.string "text"
     t.integer "likes"
   end

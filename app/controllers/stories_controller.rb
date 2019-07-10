@@ -20,9 +20,19 @@ class StoriesController < ApplicationController
     render json:@story
   end
 
+  #edit and update methods
+  def edit
+    @story = Story.find(params[:id])
+  end
+
+  def update
+    @story = Story.find(params[:id])
+    @story.update(likes: params[:likes])
+  end
+
   private
   def secure_params
-    params.require(:story).permit(:prompt_id, :text)
+    params.require(:story).permit(:beginning_id, :ending_id, :author, :text, :likes)
   end
 
 end

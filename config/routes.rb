@@ -21,4 +21,7 @@ Rails.application.routes.draw do
   get '/prompts', to: 'prompts#index'
   get '/beginnings', to: 'beginnings#index'
   get '/endings', to: 'endings#index'
+  #get 'stories/:id/edit', to: 'stories#edit', as: :edit_story  
+  patch 'stories/:id', to: 'stories#update'
+
 end
